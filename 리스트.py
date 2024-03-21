@@ -68,30 +68,15 @@ x = ["John", "George", "Paul", "Ringo"]
 for i in range(len(x)):
     print(x[i], end=" ") # 정통적인 for문
 '''
-# 1 ~ 45까지의 로또 번호 6개를 자동 생성하기
+# 1 ~ 45까지의 로또 번호 6개를 자동 생성하기, 중복제거
 import random
-ls = []
-while True:
-    rand = random.randrange(1,46)
-    if rand not in ls:
-        ls.append(rand)
-    if len(ls) == 6: break
+ls = [] # 빈 리스트 생성
+while True: # 반복 횟수를 알수 없기 때문에 그냥 참(참인 동안 반목 수행), !!!반드시 탈출 조건 필요!!!
+    rand = random.randrange(1,46) # 1~46미만(45), 임의의 값 생성
+    if rand not in ls: # ls는 빈 리스트라서 처음에는 포함되지 않음
+        ls.append(rand) # if가 참인 경우 실행
+    if len(ls) == 6: break #
 print(ls)
-
-# 임의의 수를 연속(공백)으로 입력 받아 홀수, 짝수 리스트로 나누어 담기
-# 1 2 3 4 5 6 7 8 9 10
-# 홀수 : 1 3 5 7 9
-# 짝수 : 2 4 6 8 10
-
-num = list(map(int, input()))
-a_list = []
-b_list = []
-for i in num:
-    if num % 2 == 0:
-        a_list.append(num)
-    else:
-        b_list.append(num)
-print(f"짝수 : {a_list}\n홀수 : {b_list}")
 
 
 
