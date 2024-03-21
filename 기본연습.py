@@ -18,7 +18,7 @@ print(f"""
 
 if True:
     print("정상")
-# print("rkekdkk") 줄 안맞으면 에러남
+# print("rkekdkk") 줄 안맞으면(들여쓰기,내어쓰기) 에러남
 else:
     print("에러")
 
